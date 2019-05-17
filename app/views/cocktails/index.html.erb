@@ -9,11 +9,12 @@
 <br>
 <div class="container">
 <div class="cards">
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+  <div class="card-category">
 
 <% @cocktails.each do |cocktail| %>
     <%= link_to cocktail_path(cocktail) do %>
       <%= cocktail.name %>
+      <%= cl_image_tag @.photo, height: 300, width: 400, crop: :fill %>
     <% end %>
 <% end %>
 </div>
