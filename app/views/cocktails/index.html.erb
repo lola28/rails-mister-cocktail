@@ -1,0 +1,35 @@
+
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)), url(https://cdn.dribbble.com/users/1096806/screenshots/4721065/2_dz_coctail-dribbble.jpg);">
+  <div class="container">
+    <h1>Cocktail Bananza</h1>
+
+    <h2><%= link_to 'Create cocktail', new_cocktail_path, class: 'link1' %></h2>
+  </div>
+</div>
+<br>
+<div class="container">
+<div class="cards">
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+
+<% @cocktails.each do |cocktail| %>
+    <%= link_to cocktail_path(cocktail) do %>
+      <%= cocktail.name %>
+    <% end %>
+<% end %>
+</div>
+
+<!--  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(https://cdn.dribbble.com/users/966009/screenshots/2857548/gin-tonic.jpg)">
+    Gin & Tonic
+  </div>
+
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(https://cdn.dribbble.com/users/255/screenshots/5371163/old-fashioned-d_4x.png)">
+    Old Fashioned
+  </div>
+
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(https://cdn.dribbble.com/users/324217/screenshots/3231177/dribble.jpg)">
+    Moscow Mule
+  </div>-->
+</div>
+
+
+</div>

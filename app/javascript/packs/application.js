@@ -16,3 +16,8 @@
 // const imagePath = (name) => images(name, true)
 
 console.log('Hello World from Webpacker')
+import 'bootstrap';
+
+
+<%= javascript_include_tag "application" %> <!-- from app/assets/javascripts/application.js -->
+<%= javascript_pack_tag "application" %>
